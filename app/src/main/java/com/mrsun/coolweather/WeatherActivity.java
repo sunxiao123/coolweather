@@ -1,5 +1,6 @@
 package com.mrsun.coolweather;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.mrsun.coolweather.gson.Forecast;
 import com.mrsun.coolweather.gson.Weather;
+import com.mrsun.coolweather.service.AutoUpdateService;
 import com.mrsun.coolweather.util.HttpUtil;
 import com.mrsun.coolweather.util.Utility;
 
@@ -29,6 +31,10 @@ import java.io.IOException;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
+/**
+ * Created by MrSun on 2017/3/29.
+ * 显示天气主界面的Activity
+ */
 
 public class WeatherActivity extends AppCompatActivity {
 
@@ -216,8 +222,8 @@ public class WeatherActivity extends AppCompatActivity {
         carWashText.setText(carWash);
         sportText.setText(sport);
         weatherLayout.setVisibility(View.VISIBLE);
-        //Intent intent = new Intent(this, AutoUpdateService.class);
-        //startService(intent);
+        Intent intent = new Intent(this, AutoUpdateService.class);
+        startActivity(intent);
     }
 
 //    /**
