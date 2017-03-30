@@ -42,10 +42,13 @@ public class ChooseAreaFragment extends Fragment {
     public static final int LEVEL_PROVINCE = 0;
     public static final int LEVEL_CITY = 1;
     public static final int LEVEL_COUNTY = 2;
-
+    //初始化数据集合
     private List<String> dataList = new ArrayList<>();
+    //标题
     private TextView titleText;
+    //返回上一层
     private Button backButton;
+    //省、市、县列表
     private ListView listView;
     private ArrayAdapter<String> adapter;
 
@@ -245,7 +248,7 @@ public class ChooseAreaFragment extends Fragment {
     private void showProgressDialog() {
         if (progressDialog == null) {
             progressDialog = new ProgressDialog(getActivity());
-            progressDialog.setMessage("亲!正在加载中哦...");
+            progressDialog.setMessage("正在加载中哦...");
             progressDialog.setCanceledOnTouchOutside(false);
         }
         progressDialog.show();
