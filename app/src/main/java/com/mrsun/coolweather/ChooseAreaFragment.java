@@ -32,10 +32,10 @@ import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
 
-/**
- * Created by MrSun on 2017/3/28.
- * 遍历获取全国的省市县数据
- */
+    /**
+     * Created by MrSun on 2017/3/28.
+     * 遍历获取全国的省市县数据
+     */
 
 public class ChooseAreaFragment extends Fragment {
     public static final String TAG = "ChooseAreaFragment";
@@ -87,6 +87,7 @@ public class ChooseAreaFragment extends Fragment {
         listView = (ListView) view.findViewById(R.id.list_view);
         adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, dataList);
         listView.setAdapter(adapter);
+        
         return view;
     }
 

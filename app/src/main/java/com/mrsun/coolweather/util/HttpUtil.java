@@ -12,10 +12,11 @@ import okhttp3.Request;
 public class HttpUtil {
     /**
      * 发送http请求
-     * @param address 地址
+     *
+     * @param address  地址
      * @param callback 回调
      */
-    public static void sendOkHttpRequest(String address, Callback callback){
+    public static void sendOkHttpRequest(String address, Callback callback) {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder().url(address).build();
         client.newCall(request).enqueue(callback);
